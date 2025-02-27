@@ -1,0 +1,51 @@
+Epidemic Simulation Logic:
+
+1. Population:
+   - Each person has coordinates on the map
+   - People move randomly within world boundaries
+   - Each person has a state: healthy, infected, recovered
+   - Possible additional parameters:
+     * Age (affects recovery probability)
+     * Immunity (resistance to infection)
+     * Social activity (number of contacts)
+     * Precautionary measures compliance
+
+2. Disease:
+   - Main parameters:
+     * Base infection probability on contact
+     * Infection radius
+     * Incubation period
+     * Disease duration
+     * Recovery probability
+     * Mortality rate
+   
+   - Infection mechanics:
+     * Contact proximity check (distance between people)
+     * Infection probability calculation considering factors
+     * Consideration of immunity and other individual parameters
+   
+   - Disease stages:
+     * Incubation period (infectious but no symptoms)
+     * Active phase (symptoms, high infectivity)
+     * Recovery (gradual decrease in infectivity)
+     * Immunity (temporary or permanent protection)
+
+3. Spread mechanics:
+   - Direct contact between people
+   - Contact duration consideration
+   - Distance impact on infection probability
+   - Possibility of asymptomatic spread
+   
+4. Influencing factors:
+   - Population density in different areas
+   - Social measures (quarantine, masks)
+   - Medical measures (vaccination, treatment)
+   - Seasonal changes
+   - Virus mutations
+
+5. Statistics and analysis:
+   - Case count tracking
+   - R0 calculation (basic reproduction number)
+   - Epidemic development forecasting
+   - Measure effectiveness analysis
+   - Graph plotting and visualization 

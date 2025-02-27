@@ -1,0 +1,39 @@
+Possible events for epidemic simulation:
+
+1. Natural Events:
+   - Seasonal changes (winter/summer) - affects spread rate
+   - Virus mutation - changes in infection parameters
+   - New strain emergence - possibility of reinfection
+   - Natural disasters - forced population migration
+
+2. Social Events:
+   - Mass gatherings - temporary increase in contacts
+   - Panic - increased movement speed
+   - Migration - movement of groups of people
+   - Quarantine in specific zones
+   - Closure/opening of schools and businesses
+
+3. Medical Events:
+   - Vaccine development - possibility of immunization
+   - Treatment improvement - increased recovery chance
+   - Hospital overload - increased mortality
+   - New diagnostic methods
+   - Mass testing
+
+4. Behavioral Events:
+   - Mask mandate implementation
+   - Social distancing
+   - Remote work
+   - Changes in hygiene habits
+
+5. Economic Events:
+   - Medicine shortage
+   - District border closures
+   - Transportation restrictions
+   - Goods shortage (panic behavior)
+
+6. Random Events:
+   - Super spreaders
+   - Local outbreaks
+   - False negative tests
+   - Asymptomatic carriers 
