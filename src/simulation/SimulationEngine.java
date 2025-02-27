@@ -4,11 +4,11 @@ import models.*;
 import java.util.ArrayList;
 
 public class SimulationEngine {
-    // Основной класс симуляции:
-    // - Управление временем
-    // - Обновление состояний
-    // - Применение правил
-    // - Сбор статистики
+    // Main simulation class:
+    // - Time management
+    // - State updates
+    // - Rule application
+    // - Statistics collection
 
     private ArrayList<Person> population;
     private SimulationConfig config;
@@ -29,12 +29,12 @@ public class SimulationEngine {
 
     public void update() {
         currentDay++;
-        // Обновление состояния каждого человека
+        // Update state of each person
         for (Person person : population) {
             person.move();
         }
 
-        // Проверка заражений
+        // Check for infections
         for (Person person1 : population) {
             if (person1.isInfected()) {
                 for (Person person2 : population) {
@@ -49,7 +49,7 @@ public class SimulationEngine {
     }
 
     private boolean isClose(Person p1, Person p2) {
-        int distance = 2; // Радиус заражения
+        int distance = 2; // Infection radius
         return Math.abs(p1.getX() - p2.getX()) <= distance &&
                Math.abs(p1.getY() - p2.getY()) <= distance;
     }

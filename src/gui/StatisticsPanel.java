@@ -6,10 +6,10 @@ import models.Person;
 import simulation.SimulationEngine;
 
 public class StatisticsPanel extends JPanel {
-    // Панель статистики:
-    // - Графики
-    // - Числовые показатели
-    // - Экспорт данных
+    // Statistics Panel:
+    // - Graphs
+    // - Numerical indicators
+    // - Data export
     
     private SimulationEngine engine;
     private JLabel dayLabel;
@@ -17,7 +17,7 @@ public class StatisticsPanel extends JPanel {
     private JLabel infectedLabel;
     private JLabel recoveredLabel;
     
-    // Определяем цвета для темной темы
+    // Define colors for dark theme
     private static final Color BACKGROUND_COLOR = new Color(24, 24, 24);
     private static final Color TEXT_COLOR = new Color(220, 220, 220);
     private static final Color BORDER_COLOR = new Color(50, 50, 50);
@@ -32,19 +32,19 @@ public class StatisticsPanel extends JPanel {
         
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         
-        // Создаем заголовок
-        JLabel titleLabel = new JLabel("Статистика");
+        // Create title
+        JLabel titleLabel = new JLabel("Statistics");
         titleLabel.setForeground(TEXT_COLOR);
         titleLabel.setFont(new Font("Arial", Font.BOLD, 16));
         titleLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
         
-        // Инициализируем метки с новым стилем
-        dayLabel = createStyledLabel("День: 0");
-        healthyLabel = createStyledLabel("Здоровых: 0");
-        infectedLabel = createStyledLabel("Заражённых: 0");
-        recoveredLabel = createStyledLabel("Выздоровевших: 0");
+        // Initialize labels with new style
+        dayLabel = createStyledLabel("Day: 0");
+        healthyLabel = createStyledLabel("Healthy: 0");
+        infectedLabel = createStyledLabel("Infected: 0");
+        recoveredLabel = createStyledLabel("Recovered: 0");
         
-        // Добавляем компоненты
+        // Add components
         add(titleLabel);
         add(Box.createVerticalStrut(20));
         add(dayLabel);
@@ -90,16 +90,16 @@ public class StatisticsPanel extends JPanel {
             else healthy++;
         }
         
-        dayLabel.setText("День: " + engine.getCurrentDay());
-        healthyLabel.setText("Здоровых: " + healthy);
-        infectedLabel.setText("Заражённых: " + infected);
-        recoveredLabel.setText("Выздоровевших: " + recovered);
+        dayLabel.setText("Day: " + engine.getCurrentDay());
+        healthyLabel.setText("Healthy: " + healthy);
+        infectedLabel.setText("Infected: " + infected);
+        recoveredLabel.setText("Recovered: " + recovered);
     }
     
     public void reset() {
-        dayLabel.setText("День: 0");
-        healthyLabel.setText("Здоровых: 0");
-        infectedLabel.setText("Заражённых: 0");
-        recoveredLabel.setText("Выздоровевших: 0");
+        dayLabel.setText("Day: 0");
+        healthyLabel.setText("Healthy: 0");
+        infectedLabel.setText("Infected: 0");
+        recoveredLabel.setText("Recovered: 0");
     }
 } 

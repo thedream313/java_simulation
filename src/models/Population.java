@@ -3,10 +3,10 @@ package models;
 import java.util.ArrayList;
 
 public class Population {
-    // Класс для управления группой людей и их взаимодействием
+    // Class for managing group of people and their interactions
     
-    // Здесь будут методы для:
-    // - Инициализации популяции
-    // - Обновления состояний
-    // - Получения статистики
+    // Methods for:
+    // - Population initialization
+    // - State updates
+    // - Statistics gathering
 } 

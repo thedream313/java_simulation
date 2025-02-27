@@ -3,8 +3,8 @@ package gui;
 import javax.swing.*;
 
 public class ControlPanel extends JPanel {
-    // Панель управления:
-    // - Кнопки управления
-    // - Слайдеры параметров
-    // - Переключатели режимов
+    // Control Panel:
+    // - Control buttons
+    // - Parameter sliders
+    // - Mode switches
 } 

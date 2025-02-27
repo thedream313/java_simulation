@@ -1,9 +1,9 @@
 package simulation;
 
 public class Statistics {
-    // Сбор и анализ статистики:
-    // - Количество в каждом состоянии
-    // - История изменений
-    // - Расчет показателей
-    // - Экспорт данных
+    // Statistics collection and analysis:
+    // - Count for each state
+    // - Change history
+    // - Metrics calculation
+    // - Data export
 } 

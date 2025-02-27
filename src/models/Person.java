@@ -20,11 +20,11 @@ public class Person {
     }
     
     public void move() {
-        // Случайное движение с проверкой границ
+        // Random movement with boundary checking
         int newX = x + (random.nextInt(2 * MOVE_SPEED + 1) - MOVE_SPEED);
         int newY = y + (random.nextInt(2 * MOVE_SPEED + 1) - MOVE_SPEED);
         
-        // Проверка и коррекция границ
+        // Check and correct boundaries
         x = Math.min(Math.max(newX, 0), WORLD_SIZE - 1);
         y = Math.min(Math.max(newY, 0), WORLD_SIZE - 1);
     }

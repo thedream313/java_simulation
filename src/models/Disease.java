@@ -1,10 +1,10 @@
 package models;
 
 public class Disease {
-    // Параметры болезни:
-    // - Вероятность заражения
-    // - Продолжительность болезни
-    // - Вероятность выздоровления
-    // - Вероятность смерти
-    // - Радиус заражения
+    // Disease parameters:
+    // - Infection probability
+    // - Disease duration
+    // - Recovery probability
+    // - Mortality rate
+    // - Infection radius
 } 
