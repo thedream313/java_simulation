@@ -1,127 +1,89 @@
 # Epidemic Simulation
 
-An interactive real-time visualization of epidemic spread simulation.
+An interactive real-time visualization of epidemic spread simulation with customizable parameters.
 
 ## Features
 
-- Real-time disease spread visualization
-- Dark mode interface for comfortable viewing
-- Customizable simulation parameters
-- Statistics and analytics
+- Real-time visualization of disease spread
+- Dark mode interface
+- Customizable simulation parameters:
+  - Population size
+  - Initial number of infected
+  - Infection probability
+  - Infection radius
+  - Incubation period
+  - Disease duration
+  - Recovery probability
+  - Mortality rate
 - Population movement with boundary constraints
-- Different states of infection (healthy, infected, recovered)
+- Statistics tracking
 
 ## Technical Details
 
 ### Core Components
 
-1. **Population Management**
-   - Individual movement simulation
-   - State tracking (healthy, infected, recovered)
-   - Boundary collision detection
-   - Population density visualization
+- **Population Management**: Handles individual movement and state
+- **Disease Mechanics**: Simulates disease spread, recovery, and mortality
+- **Visualization**: Real-time rendering of population state
 
-2. **Disease Mechanics**
-   - Infection probability calculation
-   - Recovery chance system
-   - Contact-based spread
-   - Disease progression stages
+### Technologies Used
 
-3. **Visualization**
-   - Real-time population movement
-   - Color-coded states:
-     * Green: Healthy
-     * Red: Infected
-     * Blue: Recovered
-   - Grid-based world representation
-   - Statistics panel with current numbers
-
-## Technologies Used
-
-- Java (Core language)
-- Swing (GUI Framework)
-- Object-Oriented Design
-- Event-Driven Architecture
-
-## Project Structure
-
-```
-src/
-├── models/
-│   ├── Person.java         # Individual entity model
-│   ├── Population.java     # Population management
-│   └── Disease.java        # Disease parameters
-│
-├── simulation/
-│   ├── SimulationEngine.java    # Core simulation logic
-│   ├── SimulationConfig.java    # Configuration
-│   └── Statistics.java          # Data collection
-│
-└── gui/
-    ├── MainWindow.java          # Main application window
-    ├── SimulationPanel.java     # Visualization component
-    ├── ControlPanel.java        # Control interface
-    └── StatisticsPanel.java     # Statistics display
-```
+- Java
+- Swing (GUI)
+- Object-oriented design
 
 ## Getting Started
 
 ### Prerequisites
-- Java JDK 8 or higher
-- Git
+
+- Java Development Kit (JDK) 21 or later
 
 ### Installation
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/your-username/epidemic-simulation.git
+git clone https://github.com/your-username/EpidemicSimulation.git
 ```
 
-2. Navigate to the project directory:
+2. Compile the project:
 ```bash
-cd epidemic-simulation
+javac -d bin src/**/*.java
 ```
 
-3. Compile the project:
+3. Run the application:
 ```bash
-javac src/**/*.java
+java -cp bin Main
 ```
 
-4. Run the simulation:
-```bash
-java -cp src Main
+## Usage
+
+1. Launch the application
+2. Configure simulation parameters in the settings dialog
+3. Use control buttons to:
+   - Start simulation
+   - Pause simulation
+   - Reset simulation with new parameters
+
+## Project Structure
+
 ```
-
-## Planned Features
-
-### Events System
-- Natural events (seasonal changes, mutations)
-- Social events (mass gatherings, quarantine)
-- Medical events (vaccine development, hospital capacity)
-- Behavioral events (mask mandates, social distancing)
-
-### Enhanced Disease Parameters
-- Incubation period
-- Varying infection rates
-- Multiple disease strains
-- Immunity duration
-
-### Additional Features
-- Statistical graphs and charts
-- Save/Load simulation states
-- Configuration presets
-- Advanced control measures
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
+src/
+├── gui/
+│   ├── ControlPanel.java      # Simulation control buttons
+│   ├── MainWindow.java        # Main application window
+│   ├── SettingsDialog.java    # Parameter configuration dialog
+│   ├── SimulationPanel.java   # Visualization panel
+│   └── StatisticsPanel.java   # Statistics display
+├── models/
+│   ├── Disease.java          # Disease behavior model
+│   ├── Person.java           # Individual entity model
+│   └── Population.java       # Population management
+├── simulation/
+│   ├── SimulationConfig.java # Configuration parameters
+│   └── SimulationEngine.java # Core simulation logic
+└── Main.java                 # Application entry point
+```
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgments
-
-- Inspired by real-world epidemic modeling
-- Based on SIR (Susceptible, Infected, Recovered) model
-- Developed for educational purposes 
+This project is licensed under the MIT License - see the LICENSE file for details. 

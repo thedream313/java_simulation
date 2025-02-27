@@ -16,6 +16,7 @@ public class StatisticsPanel extends JPanel {
     private JLabel healthyLabel;
     private JLabel infectedLabel;
     private JLabel recoveredLabel;
+    private JLabel deadLabel;
     
     // Define colors for dark theme
     private static final Color BACKGROUND_COLOR = new Color(24, 24, 24);
@@ -43,6 +44,7 @@ public class StatisticsPanel extends JPanel {
         healthyLabel = createStyledLabel("Healthy: 0");
         infectedLabel = createStyledLabel("Infected: 0");
         recoveredLabel = createStyledLabel("Recovered: 0");
+        deadLabel = createStyledLabel("Deaths: 0");
         
         // Add components
         add(titleLabel);
@@ -56,6 +58,8 @@ public class StatisticsPanel extends JPanel {
         add(infectedLabel);
         add(Box.createVerticalStrut(5));
         add(recoveredLabel);
+        add(Box.createVerticalStrut(5));
+        add(deadLabel);
     }
     
     private JLabel createStyledLabel(String text) {
@@ -87,13 +91,14 @@ public class StatisticsPanel extends JPanel {
         for (Person person : engine.getPopulation()) {
             if (person.isInfected()) infected++;
             else if (person.isRecovered()) recovered++;
-            else healthy++;
+            else if (!person.isDead()) healthy++;
         }
         
         dayLabel.setText("Day: " + engine.getCurrentDay());
         healthyLabel.setText("Healthy: " + healthy);
         infectedLabel.setText("Infected: " + infected);
         recoveredLabel.setText("Recovered: " + recovered);
+        deadLabel.setText("Deaths: " + engine.getDeathCount());
     }
     
     public void reset() {
@@ -101,5 +106,6 @@ public class StatisticsPanel extends JPanel {
         healthyLabel.setText("Healthy: 0");
         infectedLabel.setText("Infected: 0");
         recoveredLabel.setText("Recovered: 0");
+        deadLabel.setText("Deaths: 0");
     }
 } 
